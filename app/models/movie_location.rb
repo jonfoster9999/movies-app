@@ -1,0 +1,2 @@
+class MovieLocation < ApplicationRecord
+end
