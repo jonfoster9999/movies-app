@@ -12,13 +12,8 @@
 	}
 
 Category.create!([
-	{:name => "Animation"},
 	{:name => "Comedy"},
-	{:name => "Crime"},
-	{:name => "Adventure"},
 	{:name => "Drama"},
-	{:name => "Documentary"},
-	{:name => "Biography"},
 	{:name => "Horror"},
 	{:name => "Action"},
 	{:name => "Family"}
@@ -135,6 +130,109 @@ Category.find_by(:name => "Family").movies.create!([
 		:description => "No Description Available.", 
 	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/200878/theoutcasts2017.jpg"
 	}
-]
+])
 
-	)
+Category.find_by(:name => "Comedy").movies.create!([
+	{
+  		:title => "Get Out",
+		:description => "A young African-American photographer (Daniel Kaluuya) is nervous at the thought of meeting his white girlfriend's parents (Catherine Keener and Bradley Whitford) for the first time during a trip to the latter's country estate. However, his anxiety soon turns into outright terror when he discovers that the family's seemingly idyllic community is hiding a sinister conspiracy, one that involves the disappearance of several black people in the area. Jordan Peele, one half of the comedic duo Key & Peele, makes his directorial debut with this horror thriller. Allison Williams, LaKeith Stanfield, and Caleb Landry Jones co-star.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/196665/get%20out.jpg"
+	},
+	{
+  		:title => "Chips",
+		:description => "A maverick motorbike racer (Dax Shepherd) reeling from a divorce and a California Highway Patrol cop (Michael Peña) who's secretly an FBI operative must overcome their personality mismatch and work together to uncover a major theft in this big-screen adaptation of the famous TV series from the 1970s and '80s.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/183258/chips-posterart.jpg"
+	},
+	{
+  		:title => "The Last Word",
+		:description => "An aging businesswoman named Harriet (Shirley MacLaine) asks a young writer (Amanda Seyfried) from her local newspaper to draft her obituary. Harriet's domineering personality has left her with few friends or loved ones to contribute to the memorial, forcing her to make a change if she wants to leave behind a positive legacy. Directed by Mark Pellington.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/198612/thelastword-posterart.jpg"
+	},
+	{
+  		:title => "Wilson",
+		:description => "A salty curmudgeon (Woody Harrelson) who is discontented with how his life has stalled is shocked to discover he has a now-teenage daughter (Isabella Amara) put up for adoption by his ex-wife (Laura Dern) after their split. He tries to reunite the family, but his abrasive personality makes getting reacquainted unpleasant for everyone. ", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/193116/wilson_1sheet_27x40_framed-.jpg"
+	},
+	{
+  		:title => "Phillauri",
+		:description => "In order to break a curse on his love life, a young man (Suraj Sharma) must marry a tree before wedding the woman of his dreams. However, the tree he chooses is possessed by the spirit of a woman (Anushka Sharma) who was wronged in the past. Anshai Lal directed this romantic Bollywood comedy-drama.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/199803/05-romantic-poster-001245_c.jpg"
+	},
+	{
+  		:title => "For Here Or To Go?",
+		:description => "No description available.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/200235/fhtg-poster-web.jpg"
+	},
+	{
+  		:title => "Paterson",
+		:description => "A week in the life of Paterson (Adam Driver), a city bus driver in Paterson, NJ, as he balances the demands of his working-class job with his passion for poetry and the creative yearnings of his stay-at-home wife Laura (Golshifteh Farahani). Jim Jarmusch wrote and directed this meditative, slice-of-life dramedy.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/195872/paterson-poster.jpg"
+	},
+	{
+  		:title => "Carrie Pilby",
+		:description => "Carrie Pilby (Bel Powley) is a precocious and misanthropic 19-year-old Harvard grad who looks down on the rest of humanity. But when her therapist (Nathan Lane) assigns her five tasks so she can learn how to negotiate the messy world of adulthood, she is forced to form interpersonal relationships and confront past traumas for the first time. Based on the novel by Caren Lissner.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/200320/carriepilby_payoff_fm1.jpg"
+	},
+	{
+  		:title => "20th Century Women",
+		:description => "During the summer of 1979, at the sunset of the Carter presidency, a Santa Barbara single mom and boardinghouse landlord (Annette Bening) decides that the best way she can parent her teenage son (Lucas Jade Zumann) is to enlist her young tenants -- a quirky punk photographer (Greta Gerwig), a mellow handyman (Billy Crudup), and her son's shrewd but troubled best friend (Elle Fanning) -- to serve as his role models in a rapidly changing world. Written and directed by Mike Mills (Beginners).", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/196513/20thcenturywomen.jpg"
+	}
+])
+
+Category.find_by(:name => "Action").movies.create!([
+	{
+  		:title => "Power Rangers",
+		:description => "Five teenagers (Dacre Montgomery, Naomi Scott, RJ Cyler, Becky G, and Ludi Lin) become superpowered warriors in this reboot of the long-running kids' action franchise. The outcast teens are thrust into battle against the evil witch and former Ranger Rita Repulsa (Elizabeth Banks) in a fight for fate of the world. Dean Israelite directed this action adventure written by John Gatins.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/193770/powerrangersfin05_shirt_1sh.jpg"
+	},
+	{
+  		:title => "Kong: Skull Island",
+		:description => "A secret government organization mounts an expedition to Skull Island, an uncharted territory in the Pacific. Led by an explorer (John Goodman) and a lieutenant colonel (Samuel L. Jackson), the group recruit a disillusioned soldier (Tom Hiddleston) and a photojournalist (Brie Larson) to investigate the island's peculiar seismic activity. But once there, they discover that Skull Island is home to a gigantic ape called King Kong, and find themselves caught up in an ongoing war between the beast and the area's indigenous predators. Jordan Vogt-Roberts directed this reboot of the classic monster franchise.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/194236/kongskullisland.jpg"
+	},
+	{
+  		:title => "Logan",
+		:description => "In a hideout near the U.S./Mexico border, an aging Logan (Hugh Jackman) cares for the ailing Professor X (Patrick Stewart). However, their sheltered existence comes to a sudden end when a young mutant girl (Dafne Keen) arrives and needs their help to stay safe. James Mangold directed this film, the third Wolverine-based spin-off of the X-Men franchise. ", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/196901/logan_48x70forfandango_srgb.jpg"
+	},
+	{
+  		:title => "The Belko Experiment",
+		:description => "The 80 employees at a Bogotá, Colombia, company called the Belko Corporation are horrified when they are suddenly locked in their office building and ordered to kill each other -- or else face death themselves. Soon, the staff are torn between those willing to give in to their baser instincts, and those arguing that they should stand firm against their captors. John Gallagher Jr., Adria Arjona, Sean Gunn, Tony Goldwyn, and John C. McGinley star in this horror thriller directed by Greg McLean (Wolf Creek).", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/198373/belko_one_sheet_r1.jpg"
+	},
+	{
+  		:title => "Rogue One",
+		:description => "This prequel to the very first Star Wars tells the thrilling story of how a ragtag band of freedom fighters -- including a former soldier-turned-prisoner (Felicity Jones), a Rebel Alliance insider (Diego Luna), an intensely spiritual believer in the Force (Donnie Yen), and a sentient robot (voiced by Alan Tudyk) -- worked together to steal the Death Star's secret blueprints. Ben Mendelsohn, Forest Whitaker, Riz Ahmed, Mads Mikkelsen, and Jimmy Smits co-star in Rogue One, the first of several Star Wars spin-offs planned after J.J. Abrams' Star Wars: The Force Awakens reboot.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/187530/rogueone-posterart.jpg"
+	},
+	{
+  		:title => "John Wick: Chapter 2",
+		:description => "Legendary hitman John Wick (Keanu Reeves) is once again called out of retirement, this time by a former colleague (Riccardo Scamarcio) who wants him to repay a debt by killing an Italian crime lord (Claudia Gerini). But when the attempted assassination goes awry, Wick finds himself hunted by an international cabal of killers, and his only hope for survival might be a shadowy figure known as the Bowery King (Laurence Fishburne). Director Chad Stahelski and screenwriter Derek Kolstad return for this sequel to their 2014 cult action hit. Ian McShane, Ruby Rose, John Leguizamo, Common, Lance Reddick, and Bridget Moynahan co-star.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/168/250/redesign/static/img/default_poster.png/196418/images/masterrepository/fandango/196418/fin04_johnwick2_payoff_vf.jpg"
+	},
+	{
+  		:title => "The Prison",
+		:description => "A police inspector (Han Suk-Kyu) is jailed after he's involved in a fatal hit-and-run accident, and the prison he's sent to is controlled by an all-powerful inmate (Kim Rae-Won) and his syndicate. The ex-cop soon joins the criminal organization, who execute high-stakes heists on the outside at night. This action thriller was directed by Na Hyun. ", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/200521/theprison-posterart.jpg"
+	}
+
+])
+
+Category.find_by(:name => "Horror").movies.create!([
+	{
+  		:title => "Life",
+		:description => "This science fiction saga tells the story of astronauts on the International Space Station who retrieve a sample from Mars and discover it contains evidence of intelligent life. The crew is thrust into danger when the specimen shows signs of aggression, threatening the entire mission. Jake Gyllenhaal stars alongside Ryan Reynolds and Rebecca Ferguson. Daniel Espinosa directed a script written by Deadpool scribes Paul Wernick and Rhett Reese.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/197664/life_digi_fnl_1sht_0203_01.jpg"
+	},
+	{
+  		:title => "The Blackcoat's Daughter",
+		:description => "Two female students (Kiernan Shipka and Lucy Boynton) are haunted by devilish forces while stranded at their Catholic prep school over winter break. Meanwhile, a mysterious hospital escapee (Emma Roberts) charts a course toward the school, and ends up getting a ride from a grieving, middle-aged couple (James Remar and Lauren Holly). Oz Perkins made his directorial debut with this horror feature, which received its world premiere at the 2015 Toronto International Film Festival. ", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/192327/tbd_theatrical_poster_hires.jpg"
+	},
+	{
+  		:title => "Here Alone",
+		:description => "In this science-fiction thriller set in a world ravaged by zombies, a young woman named Ann (Lucy Walters) lives an isolated existence in the woods. When she crosses paths with two other survivors, a teen girl (Gina Piersanti) and her injured stepfather (Adam David Thompson), she must choose between safety in numbers or continuing to go it alone. Directed by Rod Blackhurst.", 
+	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/192354/herealone_poster_2764x4096.jpg"
+	}
+])

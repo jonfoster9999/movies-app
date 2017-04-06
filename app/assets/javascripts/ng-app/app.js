@@ -13,6 +13,12 @@ angular
 						}
 					}
 				})
+				.state('movie', {
+					url: '/movie/:id',
+					templateUrl: 'movie.html',
+					controller: 'MovieCtrl',
+					params: { id: null }
+				})
 			$urlRouterProvider.otherwise('movies');
 
 		}]);
