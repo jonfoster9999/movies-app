@@ -48,6 +48,38 @@ div.item {
 	text-align: center;
 }
 
+.item {
+  position: relative;
+  
+  overflow: hidden;
+}
+a{
+	color: black;
+}
+a.no__underline{
+	text-decoration: none;
+	color: white;
+}
+
+.item-overlay {
+	height: 200px;
+	width: 162px;
+	background-color: rgba(0, 0, 0, 0);
+	position: absolute;
+	top: 0px;
+	display: block;
+}
+.item-overlay:hover {
+	 -moz-transform: scale(1);
+ 	 -webkit-transform: scale(1);
+  	transform: scale(1);
+
+	background-color: rgba(0, 0, 0, .2);
+	position: absolute;
+	top: 0px;
+	display: block;
+}
+
 
 
 .movie__title {

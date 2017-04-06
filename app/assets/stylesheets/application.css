@@ -42,7 +42,7 @@ input {
 /*    background-image: url("http://wallpapercave.com/wp/24UgzNL.jpg");*/
     width:100%;
     margin:0px auto;
-
+    z-index:100;
 
 }
 

@@ -10,8 +10,8 @@ function GenreGroup(){
 			'<li ng-repeat="movie in movies | MovieFilter:genre | limitTo:6 ">',
 		
 			'<div class="item">',
-			'<a ui-sref="movie({id: movie.id})"><img src="{{movie.image_url}}" /></a><br>',
-			'<a ui-sref="movie({id: movie.id})"><span class="movie__title">{{movie.title}}</span></a><br>',
+			'<a ui-sref="movie({id: movie.id})"><img src="{{movie.image_url}}" /><div class="item-overlay"></div></a><br>',
+			'<a class="no__underline" ui-sref="movie({id: movie.id})"><span class="movie__title">{{movie.title}}</span></a><br>',
 			'</div>',
 			'</li>',
 			'</ul>'].join(""),
