@@ -4,11 +4,13 @@
     <title>MoviesApp</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body ng-app="app">
+  <div class="header"><h1>Cinema Star</h1>
+  <h5>Browse new releases and find out what's playing in your area</h5></div>
     <ui-view></ui-view>
   </body>
 </html>

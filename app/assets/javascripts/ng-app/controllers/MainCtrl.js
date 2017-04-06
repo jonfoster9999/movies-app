@@ -1,10 +1,7 @@
-function MainCtrl($scope, $http) {
-	$scope.thing = "cool"
-	$scope.examples = []
-
-	$http.get("/examples").then(function(response){
-		$scope.examples = response.data
-	})
+function MainCtrl($scope, $http, movieObject) {
+	console.log(movieObject)
+	$scope.genre = 'huh'
+	$scope.movies = movieObject.data
 }
 
 angular 

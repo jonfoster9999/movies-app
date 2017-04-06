@@ -1,0 +1,49 @@
+html {
+	height: 100%;
+    background: #36d1dc; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #4b56e5, #5b86e5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #4b56e5, #5b86e5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #4b56e5, #5b86e5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left, #4b56e5, #5b86e5); /* Standard syntax */
+    min-width: 960px;
+}
+
+ul img{
+	height: 200px;
+	width: 130px;
+}
+
+.movies__main {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.movie__label {
+	color: gold;
+	margin-left: 16px;
+	margin-bottom: 10px;
+}
+
+ul{
+	list-style: none;
+	clear:left;
+}
+li {
+	float: left;
+	margin-left: 15px;
+}
+
+div.item {
+	vertical-align :block;
+	display: inline-block;
+	text-align: center;
+}
+
+
+
+.movie__title {
+	font-size: .7em;
+	color: white;
+	display: block;
+}

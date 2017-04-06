@@ -3,18 +3,16 @@ angular
 	.config(['$stateProvider', '$urlRouterProvider',
 		function($stateProvider, $urlRouterProvider) {
 			$stateProvider 
-				.state('home', {
-					url: '/home',
-					templateUrl: 'home.html',
-					controller: 'MainCtrl'
+				.state('movies', {
+					url: '/movies',
+					templateUrl: 'movies.html',
+					controller: 'MainCtrl',
+					resolve: {
+						movieObject: function($http){
+							return $http.get('/movies')
+						}
+					}
 				})
-				.state('other', {
-					url: "/other",
-					templateUrl: 'other.html',
-					controller: 'OtherCtrl'
-				})
-
-
-			$urlRouterProvider.otherwise('home');
+			$urlRouterProvider.otherwise('movies');
 
 		}]);

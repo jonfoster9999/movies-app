@@ -10,6 +10,53 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+body{
+    margin:0px;
+    width: 100%;
+    margin: auto;
+}
+.header-cont {
+    width:100%;
+    position:fixed;
+    top:0px;
+}
+.header {
+    height:100px;
+
+    background: #36d1dc; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #444, #434343); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #444, #434343); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #444, #434343); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left, #444, #454545); /* Standard syntax */
+    width:100%;
+    margin:0px auto;
+
+
+}
+
+.header h1 {
+	    color: white;
+    font-size: 3em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    padding-top: 20px;
+    font-family: serif;
+    text-shadow: 2px 2px #111;
+}
+
+.header h5 {
+    text-align: center;
+    margin-top: -5px;
+    color: white;
+}
+.content {
+    width:960px;
+    background: #F0F0F0;
+    border: 1px solid #CCC;
+    height: 2000px;
+    margin: 70px auto;
+}
+
