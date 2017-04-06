@@ -16,10 +16,10 @@ function GenreGroup(){
 			'</li>',
 			'</ul>'].join(""),
 			controller: function($scope) {
-				console.log($scope.movies)
+				
 			},
 			link: function(scope, element, attrs) {
-				console.log("test", scope.movies)
+			
 			}
 	}
 }

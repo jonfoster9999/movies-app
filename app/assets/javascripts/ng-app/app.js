@@ -17,7 +17,13 @@ angular
 					url: '/movie/:id',
 					templateUrl: 'movie.html',
 					controller: 'MovieCtrl',
-					params: { id: null }
+					params: { id: null },
+					resolve: {
+						movie: function($http, $stateParams) {
+							return $http.get('/movies/' + $stateParams.id)
+						}
+
+					}
 				})
 			$urlRouterProvider.otherwise('movies');
 
