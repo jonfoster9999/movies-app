@@ -1,22 +1,35 @@
+<%= stylesheet_link_tag 'movie' %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="container">
+<h1 class="title" ><span >{{movie.title}}</span></h1>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1>{{movie.title}}</h1>
 <img style="box-shadow: 1px 1px 1px 1px black" src="{{movie.image_url}}">
-<p>{{movie.description}}</p>
-<ul>
+
+<h3>Description: </h3>
+<p></p>
+{{movie.description}}
+<p></p>
+
+
 <form name="form" ng-submit="submitted()">
-	<input name="content" type="text" ng-model="formData.content" required="required">
-	<input type="email" name="email" ng-model="formData.email" required="required">
+	<label for="content">New Comment:</label><br>
+	<textarea name="content" type="text" ng-model="formData.content" required="required"></textarea><br>
+	<label for="content">Email:</label><br>
+	<input type="email" name="email" ng-model="formData.email" required="required"><br>
 	<input type="submit">
 </form>
-	<li ng-repeat="comment in comments">
-	{{comment.content}} by {{comment.email}}
+
+<ul class="comments">
+	<h5>Comments: </h5>
+	<li  ng-repeat="comment in comments">
+	<span class="quote">"{{comment.content}}" </span> <span class="commentor">({{comment.email}})</span>
 	</li>
 </ul>
-<a ui-sref="movies">Back</a>
+<a style="clear:both;" ui-sref="movies">Back</a>
+</div>

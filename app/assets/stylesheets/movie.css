@@ -1,0 +1,110 @@
+#container {
+	width: 86%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+hr {
+	width: 148px;
+	margin-left: 15px;
+ 	border: 0; height: 1px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .15), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, .45));
+}
+
+h1.title {
+		color: lightyellow;
+}
+
+ul {
+	margin-left: 0px;
+	padding-left: 0px;
+	list-style: none;
+}
+
+input[type="submit"] {
+	margin-top: 5px;
+}
+
+input[type="email"] {
+	border-radius: 0px;
+	width: 90%;
+}
+
+textarea{
+	width: 90%;
+	height: 40px;
+}
+
+
+
+form {
+	float: left;
+	color: white;
+	margin: 0px;
+	border: 1px solid #aaa;
+	width: 20%;
+	background-color: rgba(125, 125, 125, .8);
+	padding: 10px;
+}
+input{
+	margin: 0px;
+}
+
+.description{
+	width: 50%;
+}
+
+.quote {
+	color: tan;
+}
+
+p{
+	color: black;
+	border-radius: 3px;
+	padding: 3px;
+	background-color: rgba(255, 255, 255, .3);
+}
+.comments {
+	margin-top: 0px;
+	float: left;
+	margin-left: 20px;
+	border: 1px solid #aaa;
+	background-color: rgba(125, 125, 125, .8);
+	height: 133px;
+	width: 500px;
+	clear: right;
+	padding: 10px;
+	overflow: scroll;
+}
+
+.commentor {
+	color: white;
+}
+
+.comments h5 {
+	color: white;
+	margin-left: 6px;
+}
+
+h5 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+li {
+	margin-top: 3px;
+	background-color: rgba(0, 30, 12, .5);
+	margin-bottom: 3px;
+	border-radius: 3px;
+
+	padding: 6px;
+	width: 488px;
+	word-wrap: break-word;
+
+}
+
+
+
+img{
+
+}
