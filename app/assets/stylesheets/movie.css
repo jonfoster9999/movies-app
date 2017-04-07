@@ -28,6 +28,7 @@ input[type="submit"] {
 input[type="email"] {
 	border-radius: 0px;
 	width: 90%;
+	text-align: left;
 }
 
 textarea{
@@ -93,7 +94,7 @@ h5 {
 
 li {
 	margin-top: 3px;
-	background-color: rgba(0, 30, 12, .5);
+	background-color: rgba(0, 30, 12, .05);
 	margin-bottom: 3px;
 	border-radius: 3px;
 

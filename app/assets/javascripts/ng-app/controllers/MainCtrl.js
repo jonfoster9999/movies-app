@@ -1,5 +1,4 @@
 function MainCtrl($scope, $http, movieObject) {
-	$scope.genre = 'huh'
 	$scope.movies = movieObject.data
 }
 

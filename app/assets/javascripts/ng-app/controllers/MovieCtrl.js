@@ -12,6 +12,7 @@ function MovieCtrl($scope, $http, $stateParams, movie){
 			data: $scope.formData
 		}).then(function(data){
 			$scope.comments = data.data
+			$scope.formData = {}
 		})
 	}
 }

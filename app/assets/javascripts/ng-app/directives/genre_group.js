@@ -6,7 +6,7 @@ function GenreGroup(){
 			movies: '='
 		},
 		template: ['<ul><h5 class="movie__label">{{genre}}: ',
-			'<a href="#">(See all in category)</a></h5><hr>',
+			'<a ui-sref="category({id: genre.toLowerCase()})">(See all in category)</a></h5><hr>',
 			'<li ng-repeat="movie in movies | MovieFilter:genre | limitTo:6 ">',
 		
 			'<div class="item">',
