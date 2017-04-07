@@ -1,3 +1,4 @@
+
 <br>
 <br>
 <br>
@@ -8,4 +9,14 @@
 <h1>{{movie.title}}</h1>
 <img style="box-shadow: 1px 1px 1px 1px black" src="{{movie.image_url}}">
 <p>{{movie.description}}</p>
+<ul>
+<form name="form" ng-submit="submitted()">
+	<input name="content" type="text" ng-model="formData.content" required="required">
+	<input type="email" name="email" ng-model="formData.email" required="required">
+	<input type="submit">
+</form>
+	<li ng-repeat="comment in comments">
+	{{comment.content}} by {{comment.email}}
+	</li>
+</ul>
 <a ui-sref="movies">Back</a>

@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :comments
   resources :movie_actors
   resources :movie_locations
-  	resources :examples
-	root 'application#home'
+  resources :examples
+  root 'application#home'
 end

@@ -1,6 +1,19 @@
-function MovieCtrl($scope, $stateParams, movie){
+function MovieCtrl($scope, $http, $stateParams, movie){
 	$scope.movie = movie.data
-	console.log($scope.movie)
+	$scope.comments = $scope.movie.comments
+	$scope.formData = {}
+	$scope.formData.movie_id = $scope.movie.id
+	console.log($scope.comments)
+	$scope.submitted = function(){
+		$http({
+			method: 'POST',
+			beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+			url: '/comments',
+			data: $scope.formData
+		}).then(function(data){
+			$scope.comments = data.data
+		})
+	}
 }
 
 angular  	

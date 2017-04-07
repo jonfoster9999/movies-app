@@ -1,7 +1,9 @@
 angular 
 	.module('app', ['ui.router', 'templates'])
-	.config(['$stateProvider', '$urlRouterProvider',
-		function($stateProvider, $urlRouterProvider) {
+	.config(['$stateProvider', '$urlRouterProvider', '$qProvider', '$httpProvider',
+		function($stateProvider, $urlRouterProvider, $qProvider, $httpProvider) {
+			$httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
+			$qProvider.errorOnUnhandledRejections(false);
 			$stateProvider 
 				.state('movies', {
 					url: '/movies',
