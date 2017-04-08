@@ -1,7 +1,16 @@
 #container {
-	width: 86%;
+	width: 737px;
 	margin-left: auto;
 	margin-right: auto;
+	border-top-right-radius: 15px;
+}
+
+img {
+	border: 4px solid white;
+	float: left;
+	margin-right: 45px;
+	height: 245px;
+	width: 186px;
 }
 
 hr {
@@ -43,9 +52,10 @@ form {
 	color: white;
 	margin: 0px;
 	border: 1px solid #aaa;
-	width: 20%;
+	width: 173px;
 	background-color: rgba(125, 125, 125, .8);
 	padding: 10px;
+	clear: left;
 }
 input{
 	margin: 0px;
@@ -56,14 +66,15 @@ input{
 }
 
 .quote {
-	color: tan;
+	color: black;
 }
 
 p{
 	color: black;
 	border-radius: 3px;
-	padding: 3px;
-	background-color: rgba(255, 255, 255, .3);
+	padding: 13px;
+	margin-left: 10px;
+/*	background-color: rgba(255, 255, 255, .3);*/
 }
 .comments {
 	margin-top: 0px;
@@ -78,8 +89,20 @@ p{
 	overflow: scroll;
 }
 
+#paragraph__container {
+	 background-image: linear-gradient(to right, rgba(235, 235, 235, 0.45), rgba(255, 255, 255, 0.65), rgba(255, 255, 255, .9));
+
+		width: 521px;	
+		height: 255px;
+		margin-bottom: 20px;
+		border-radius: 6px;
+		margin-left: 216px;
+		word-wrap: break-word;
+
+}
+
 .commentor {
-	color: white;
+	color: orange;
 }
 
 .comments h5 {
@@ -94,11 +117,12 @@ h5 {
 
 li {
 	margin-top: 3px;
-	background-color: rgba(0, 30, 12, .05);
+	background-color: white;
+	border: 1px solid black;
 	margin-bottom: 3px;
 	border-radius: 3px;
 
-	padding: 6px;
+	padding: 3px;
 	width: 488px;
 	word-wrap: break-word;
 

@@ -1,3 +1,6 @@
+<%= stylesheet_link_tag 'movies' %>
+<%= stylesheet_link_tag 'categories' %>
+
 <br>
 <br>
 <br>
@@ -5,16 +8,18 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-{{categoryName}}
-<ul>
-	<li ng-repeat="movie in movies">
-		{{movie.title}}
-	</li>
-</ul>
+
+<div class="movies__main">
+	<h1>{{categoryName}} </h1>	
+	<ul>
+		<li ng-repeat="movie in movies">
+			<div class="item">
+				<a ui-sref="movie({id: movie.id})"><img src="{{movie.image_url}}" /><div class="item-overlay"></div></a>
+				<br>
+				<a class="no__underline" ui-sref="movie({id: movie.id})"><span class="movie__title">{{movie.title}}</span></a><br>
+			</div>
+		</li>
+	</ul>
+</div>
 
 <a style="clear:both;" ui-sref="movies">Back</a>

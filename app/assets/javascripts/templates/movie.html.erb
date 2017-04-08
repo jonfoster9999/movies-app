@@ -6,16 +6,15 @@
 <br>
 <br>
 <br>
-<br>
+<a style="clear:both;" ui-sref="movies">Back</a>
 <div id="container">
-<h1 class="title" ><span >{{movie.title}}</span></h1>
+	<h1 class="title" ><span >{{movie.title}}</span></h1>
 
-<img style="box-shadow: 1px 1px 1px 1px black" src="{{movie.image_url}}">
+	<img style="box-shadow: 1px 1px 1px 1px black" src="{{movie.image_url}}">
+	<div id="paragraph__container">
+		<p>{{movie.description}}</p>
+	</div>
 
-<h3>Description: </h3>
-<p></p>
-{{movie.description}}
-<p></p>
 
 
 <form name="form" ng-submit="submitted()">
@@ -32,5 +31,5 @@
 	<span class="quote">"{{comment.content}}" </span> <span class="commentor">({{comment.email}})</span>
 	</li>
 </ul>
-<a style="clear:both;" ui-sref="movies">Back</a>
+
 </div>

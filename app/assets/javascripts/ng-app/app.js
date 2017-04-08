@@ -1,10 +1,27 @@
 angular 
 	.module('app', ['ui.router', 'templates'])
-	.config(['$stateProvider', '$urlRouterProvider', '$qProvider', '$httpProvider',
-		function($stateProvider, $urlRouterProvider, $qProvider, $httpProvider) {
+	.config(['$stateProvider', '$urlRouterProvider', '$qProvider', '$httpProvider', '$locationProvider',
+		function($stateProvider, $urlRouterProvider, $qProvider, $httpProvider, $locationProvider) {
+			$locationProvider.hashPrefix('');
 			$httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
 			$qProvider.errorOnUnhandledRejections(false);
 			$stateProvider 
+				.state('info', {
+					url: '/info', 
+					templateUrl: 'info.html',
+					controller: 'InfoCtrl'
+				})
+				.state('info.privacy', {
+					url: '/privacy',
+					templateUrl: 'privacy.html',
+					controller: 'PrivacyCtrl'
+				})
+				.state('info.contact', {
+					url: '/contact',
+					templateUrl: 'contact.html',
+					controller: 'ContactCtrl'
+				})
+
 				.state('movies', {
 					url: '/movies',
 					templateUrl: 'movies.html',
@@ -16,7 +33,7 @@ angular
 					}
 				})
 				.state('movie', {
-					url: '/movie/:id',
+					url: '/movies/:id',
 					templateUrl: 'movie.html',
 					controller: 'MovieCtrl',
 					params: { id: null },
@@ -27,8 +44,19 @@ angular
 
 					}
 				})
+
+				.state('cast', {
+					url: '/movies/:id/cast',
+					templateUrl: 'cast.html'
+				})
+
+				.state('cast.actors', {
+					url: '/:actor_id',
+					templateUrl: 'actor.html'
+				})
+
 				.state('category', {
-					url: '/categories/:id/movies',
+					url: '/movies/categories/:id',
 					templateUrl: 'category.html',
 					controller: 'CategoryCtrl',
 					resolve: {
@@ -37,6 +65,7 @@ angular
 						}
 					}
 				})
+
 			$urlRouterProvider.otherwise('movies');
 
 		}])

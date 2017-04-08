@@ -1,0 +1,30 @@
+h1 {
+	margin-left: 55px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	color: white;
+}
+
+.white {
+
+	font-size: .4em;
+}
+
+.item-overlay {
+	height: 200px;
+	width: 130px;
+	background-color: rgba(0, 0, 0, 0);
+	position: absolute;
+	top: 0px;
+	display: block;
+}
+.item-overlay:hover {
+	 -moz-transform: scale(1);
+ 	 -webkit-transform: scale(1);
+  	transform: scale(1);
+
+	background-color: rgba(0, 0, 0, .2);
+	position: absolute;
+	top: 0px;
+	display: block;
+}
