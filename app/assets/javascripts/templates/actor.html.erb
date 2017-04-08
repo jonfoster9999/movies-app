@@ -1,5 +1,8 @@
-<h1>Actor info here!</h1>
-{{actor.name}}<br>
-{{actor.bio}}
+<%= stylesheet_link_tag 'actors' %>
+<div class="actor__class">
+<h2 class="actor__name">{{actor.name}}</h2>
 
 <img src="{{actor.image_url}}">
+<p>{{actor.bio}}</p>
+
+</div>

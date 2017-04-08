@@ -1,0 +1,16 @@
+img {
+	height: 200px;
+	width: 140px;
+}
+
+p {
+	width: 40%;
+}
+
+.actor__class{
+	margin-left: 20px;
+}
+
+.actor__name {
+	color: tan;
+}

@@ -11,7 +11,8 @@ function MovieCtrl($scope, $http, $stateParams, movie){
 			url: '/comments',
 			data: $scope.formData
 		}).then(function(data){
-			$scope.formData = {}
+			$scope.formData.content = '';
+			$scope.formData.email = '';
 			$scope.formData.movie_id = $scope.movie.id
 			$scope.comments = data.data
 		})

@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag 'cast' %>
 <br>
 <br>
 <br>
@@ -5,11 +6,16 @@
 <br>
 <br>
 <br>
+
 <h1>Cast of {{movie.title}}</h1>
+
 <ul>
 <li ng-repeat="actor in actors">
 <a ui-sref="cast.actors({id: movie.id, actor_id: actor.id})">{{actor.name}}</a>
 </li>
 </ul>
+<hr>
+
 <ui-view></ui-view>
-<a ui-sref="movies">Home</a>
+<a class="move__over" ui-sref="movies">Home</a>
+

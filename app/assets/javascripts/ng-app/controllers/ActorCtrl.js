@@ -1,9 +1,7 @@
 function ActorCtrl($scope, actor_id) {
-	$scope.actor = $scope.actors.filter(function(obj) {
+	$scope.actor = $scope.actors.find(function(obj) {
 		return obj.id == actor_id
-	})[0]
-
-	console.log($scope.actor.name)
+	})
 }
 
 angular  
