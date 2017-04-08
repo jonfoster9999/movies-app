@@ -40,6 +40,22 @@ input[type="email"] {
 	text-align: left;
 }
 
+.right {
+	float:right;
+	margin-left: 3px;
+	
+}
+
+.right a {
+	text-decoration: none;
+	color: tan;
+	font-size: .5em;
+
+	background-color: rgba(0, 0, 0, .4);
+	padding: 10px;
+	border-radius: 13px;
+}
+
 textarea{
 	width: 90%;
 	height: 40px;

@@ -47,12 +47,25 @@ angular
 
 				.state('cast', {
 					url: '/movies/:id/cast',
-					templateUrl: 'cast.html'
+					templateUrl: 'cast.html',
+					controller: 'CastCtrl',
+					resolve: {
+						movie: function($http, $stateParams) {
+							return $http.get('/movies/' + $stateParams.id)
+						}
+
+					}
 				})
 
 				.state('cast.actors', {
 					url: '/:actor_id',
-					templateUrl: 'actor.html'
+					templateUrl: 'actor.html',
+					controller: 'ActorCtrl',
+					resolve: {
+						actor_id: function($stateParams) {
+							return $stateParams.actor_id
+						}
+					}
 				})
 
 				.state('category', {

@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 	{
-  		:title => "",
-		:description => "", 
+  		:name => "",
+		:bio => "", 
 	 	:image_url => ""
 	}
 
@@ -236,3 +236,689 @@ Category.find_by(:name => "Horror").movies.create!([
 	 	:image_url => "http://images.fandango.com/r1.0.23/ImageRenderer/164/250/redesign/static/img/default_poster.png/0/images/masterrepository/fandango/192354/herealone_poster_2764x4096.jpg"
 	}
 ])
+
+#ACTOR SEEDS
+Movie.find_by(:title => "The Case For Christ").actors.create!([
+	{
+  		:name => "Mike Vogel",
+		:bio => "Mike Vogel was born on July 17, 1979 in Abington, Pennsylvania, USA as Michael James Vogel. He is an actor and producer, known for Cloverfield (2008), The Help (2011) and Blue Valentine (2010). He has been married to Courtney Vogel since January 4, 2003. They have three children.", 
+	 	:image_url => "https://images-na.ssl-images-amazon.com/images/M/MV5BMTkwNDIzMTExOV5BMl5BanBnXkFtZTcwNzk1NjEzMQ@@._V1_.jpg"
+	},
+	{
+  		:name => "Erika Christensen",
+		:bio => "Erika Jane Christensen was born in 1982 in Seattle, Washington, to Kathy (Hendricks), a construction manager, and Steven Christensen, a human resources executive and insurance worker. She was raised in the suburban outskirts of Los Angeles, California. At age 12, Erika knew that she was going to be an actress.", 
+	 	:image_url => "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc5Njk4MTM0NV5BMl5BanBnXkFtZTcwMjI3NDUwOA@@._V1_UY317_CR11,0,214,317_AL_.jpg"
+	},
+	{
+  		:name => "Faye Dunaway",
+		:bio => "She was one of the hottest actresses in the 1970s playing neurotic, highly driven women with sex appeal. Life in the 1990s has not been as good. In a much-publicized incident, she was dropped as the lead in the Broadway musical \"Sunset Boulevard,\" and her attempt at starring in a television comedy was an unmitigated bomb.", 
+	 	:image_url => "https://images-na.ssl-images-amazon.com/images/M/MV5BMTk4OTU5MDY0OV5BMl5BanBnXkFtZTYwNTc0MTM1._V1_UY317_CR13,0,214,317_AL_.jpg"
+	}
+
+	])
+Movie.find_by(:title => "Ghost In The Shell").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "The Zookeeper's Wife").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "The Shack").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Hidden Figures").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "T2: Trainspotting").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Lion").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "La La Land").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Personal Shopper").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Before I Fall").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Beauty And The Beast").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "The Boss Baby").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "The Lego Batman Movie").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "My Life As A Zucchini").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Smurfs: The Lost Villiage").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Spark: A Space Tale").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Leap!").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Rock Dog").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "The Outcasts").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Get Out").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Chips").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "The Last Word").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Wilson").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Phillauri").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "For Here Or To Go?").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Paterson").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Carrie Pilby").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "20th Century Women").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Power Rangers").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Kong: Skull Island").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Logan").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "The Belko Experiment").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Rogue One").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "John Wick: Chapter 2").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "The Prison").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Life").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "The Blackcoat's Daughter").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])
+Movie.find_by(:title => "Here Alone").actors.create!([
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	},
+	{
+  		:name => "",
+		:bio => "", 
+	 	:image_url => ""
+	}
+
+	])

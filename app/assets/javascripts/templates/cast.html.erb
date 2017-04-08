@@ -5,6 +5,11 @@
 <br>
 <br>
 <br>
-<h1>heard a click</h1>
-
+<h1>Cast of {{movie.title}}</h1>
+<ul>
+<li ng-repeat="actor in actors">
+<a ui-sref="cast.actors({id: movie.id, actor_id: actor.id})">{{actor.name}}</a>
+</li>
+</ul>
 <ui-view></ui-view>
+<a ui-sref="movies">Home</a>
