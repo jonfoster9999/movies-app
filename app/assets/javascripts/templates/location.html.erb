@@ -7,3 +7,12 @@
 <br>
 <br>
 <h1>Location</h1>
+<input type="text" ng-model="searchText"><br>
+Showing search results for {{searchText}}:
+<ul ng-show="searchText.length == 5 && +(searchText)">
+
+
+<li ng-repeat="movie in movies | filter:searchText ">
+	{{movie.title}}
+
+</li>

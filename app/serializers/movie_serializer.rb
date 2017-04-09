@@ -3,4 +3,5 @@ class MovieSerializer < ActiveModel::Serializer
   belongs_to :category
   has_many :comments
   has_many :actors
+  has_many :locations
 end

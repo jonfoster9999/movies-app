@@ -28,8 +28,7 @@ angular
 				})
 				.state('info.privacy', {
 					url: '/privacy',
-					templateUrl: 'privacy.html',
-					controller: 'PrivacyCtrl'
+					templateUrl: 'privacy.html'
 				})
 				.state('info.contact', {
 					url: '/contact',

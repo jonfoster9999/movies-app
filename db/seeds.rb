@@ -907,3 +907,5 @@ Movie.find_by(:title => "Here Alone").actors.create!([
 	}
 
 	])
+
+Location.find_by(:name => "Southampton").movies.
