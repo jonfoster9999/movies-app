@@ -19,7 +19,12 @@ angular
 				.state('home.locations', {
 					url: "locations",
 					templateUrl: "location.html",
-					controller: 'LocationsCtrl'
+					controller: 'LocationsCtrl',
+					resolve: {
+						locations: function($http) {
+							return $http.get('/locations')
+						}
+					}
 				})
 				.state('info', {
 					url: '/info', 

@@ -21,8 +21,8 @@ Category.create!([
 
 Location.create!([
 		{:city =>"Southampton", :zip => 11968},
-		{:city =>"Easthampton", :zip => 01027},
-		{:city =>"Sag Harbor", :zip => 11968},
+		{:city =>"Easthampton", :zip => 11937},
+		{:city =>"Sag Harbor", :zip => 11963},
 		{:city =>"Montauk", :zip => 11954},
 		{:city =>"Mattituck", :zip => 11952},
 		{:city =>"Quogue", :zip => 11942},
@@ -908,4 +908,103 @@ Movie.find_by(:title => "Here Alone").actors.create!([
 
 	])
 
-Location.find_by(:name => "Southampton").movies.
+Location.find_by(:city => "Southampton").movies += [
+	Movie.find(1),
+	Movie.find(3),
+	Movie.find(13),
+	Movie.find(7),
+	Movie.find(19),
+	Movie.find(8)
+]
+
+Location.find_by(:city => "Easthampton").movies += [
+	Movie.find(4),
+	Movie.find(15),
+	Movie.find(19),
+	Movie.find(29),
+	Movie.find(16),
+	Movie.find(31)
+]
+
+Location.find_by(:city => "Sag Harbor").movies += [
+	Movie.find(3),
+	Movie.find(16),
+	Movie.find(7),
+	Movie.find(8),
+	Movie.find(21),
+	Movie.find(10)
+]
+
+Location.find_by(:city => "Montauk").movies += [
+	Movie.find(3),
+	Movie.find(12),
+	Movie.find(6),
+	Movie.find(9),
+	Movie.find(32),
+	Movie.find(19)
+]
+
+Location.find_by(:city => "Mattituck").movies += [
+	Movie.find(13),
+	Movie.find(11),
+	Movie.find(20),
+	Movie.find(21),
+	Movie.find(14),
+	Movie.find(34)
+]
+
+Location.find_by(:city => "Quogue").movies += [
+	Movie.find(31),
+	Movie.find(35),
+	Movie.find(37),
+	Movie.find(3),
+	Movie.find(17),
+	Movie.find(9)
+]
+
+Location.find_by(:city => "Stony Brook").movies += [
+	Movie.find(24),
+	Movie.find(34),
+	Movie.find(15),
+	Movie.find(14),
+	Movie.find(18),
+	Movie.find(12)
+]
+
+Location.find_by(:city => "Southold").movies += [
+	Movie.find(17),
+	Movie.find(9),
+	Movie.find(8),
+	Movie.find(3),
+	Movie.find(38),
+	Movie.find(2)
+]
+
+Location.find_by(:city => "Greenport").movies += [
+	Movie.find(20),
+	Movie.find(10),
+	Movie.find(31),
+	Movie.find(33),
+	Movie.find(6),
+	Movie.find(23)
+]
+
+Location.find_by(:city => "Water Mill").movies += [
+	Movie.find(28),
+	Movie.find(29),
+	Movie.find(6),
+	Movie.find(9),
+	Movie.find(32),
+	Movie.find(5)
+]
+
+Location.find(1).save
+Location.find(2).save
+Location.find(3).save
+Location.find(4).save
+Location.find(5).save
+Location.find(6).save
+Location.find(7).save
+Location.find(8).save
+Location.find(9).save
+Location.find(10).save

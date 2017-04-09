@@ -1,3 +1,6 @@
+<%= stylesheet_link_tag 'movies' %>
+<%= stylesheet_link_tag 'categories' %>
+<%= stylesheet_link_tag 'locations' %>
 <br>
 <br>
 <br>
@@ -6,13 +9,22 @@
 <br>
 <br>
 <br>
-<h1>Location</h1>
-<input type="text" ng-model="searchText"><br>
-Showing search results for {{searchText}}:
+<h1>Search By Location</h1>
+<input id="search" type="text" placeholder="Enter zipcode" ng-model="searchText"><br>
+
+<p>
+Showing search results for <span class="search__color">{{searchText}}</span> <span ng-show="searchText.length == 5">{{locationName}}</span>:</p>
+<div class="movies__main">
 <ul ng-show="searchText.length == 5 && +(searchText)">
 
 
 <li ng-repeat="movie in movies | filter:searchText ">
-	{{movie.title}}
+<div class="item">
+				<a ui-sref="movie({id: movie.id})"><img src="{{movie.image_url}}" /><div class="item-overlay"></div></a>
+				<br>
+				<a class="no__underline" ui-sref="movie({id: movie.id})"><span class="movie__title">{{movie.title}}</span></a><br>
+			</div>
 
 </li>
+</ul>
+</div>
