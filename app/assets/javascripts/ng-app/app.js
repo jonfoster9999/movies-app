@@ -5,7 +5,22 @@ angular
 			$locationProvider.hashPrefix('');
 			$httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
 			$qProvider.errorOnUnhandledRejections(false);
-			$stateProvider 
+			$stateProvider
+				.state('home', {
+					url: "/",
+					templateUrl: "index.html",
+					controller: 'MainCtrl',
+					resolve: {
+						movieObject: function($http){
+							return $http.get('/movies')
+						}
+					}
+				}) 
+				.state('home.locations', {
+					url: "locations",
+					templateUrl: "location.html",
+					controller: 'LocationsCtrl'
+				})
 				.state('info', {
 					url: '/info', 
 					templateUrl: 'info.html',
@@ -22,15 +37,9 @@ angular
 					controller: 'ContactCtrl'
 				})
 
-				.state('movies', {
-					url: '/movies',
-					templateUrl: 'movies.html',
-					controller: 'MainCtrl',
-					resolve: {
-						movieObject: function($http){
-							return $http.get('/movies')
-						}
-					}
+				.state('home.movies', {
+					url: 'movies',
+					templateUrl: 'movies.html'
 				})
 				.state('movie', {
 					url: '/movies/:id',
