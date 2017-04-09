@@ -5,8 +5,6 @@
 <br>
 <br>
 <br>
-<br>
-<a style="clear:both;" ui-sref="movies">Back</a>
 <div id="container">
 	<h1 class="title" ><span >{{movie.title}}</span><span class="right"><a ui-sref="cast({id: movie.id})">Cast</a></span><span class="right"><a ui-sref="movies">Home</a></span></h1>
 
@@ -27,6 +25,7 @@
 
 <ul class="comments">
 	<h5>Comments: </h5>
+	<hr>
 	<li  ng-repeat="comment in comments">
 	<span class="quote">"{{comment.content}}" </span> <span class="commentor">({{comment.email}})</span>
 	</li>

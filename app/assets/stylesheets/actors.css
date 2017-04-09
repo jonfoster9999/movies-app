@@ -1,16 +1,40 @@
 img {
-	height: 200px;
-	width: 140px;
+	height: 160px;
+	width: 110px;
 }
 
 p {
-	width: 40%;
+	width: 90%;
+	color: black;
+	text-align: center;
+	padding: 15px;
+	margin-top: 0px;
+}
+
+h2 {
+	text-align: center;
 }
 
 .actor__class{
-	margin-left: 20px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+		width: 30%;
+		padding-top: 5px;
+}
+
+img {
+	margin-bottom: 0px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .actor__name {
-	color: tan;
+	color: black;
+}
+
+.actor__card {
+
 }

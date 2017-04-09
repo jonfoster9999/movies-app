@@ -22,6 +22,22 @@
     min-width: 960px;
 }
 
+.nav {
+    margin-top: -20px;
+    margin-left: 20px;
+    float: right;
+
+}
+
+.nav a {
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: tan;
+}
 html {
 	padding: 0;
 	margin: 0;
@@ -32,6 +48,8 @@ body{
     width: 100%;
     margin: auto;
 }
+
+
 .header-cont {
     width:100%;
 
@@ -44,7 +62,7 @@ input {
 }
 .header {
 	margin-top: 0;
-    height:130px;
+    height:110px;
 	position:fixed;
 	background: #333;
 
@@ -56,13 +74,13 @@ input {
 }
 
 .header h1 {
-	color: white;
+	color: sienna;
     font-size: 3em;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
     padding-top: 20px;
-    font-family: serif;
+    font-family: times;
     text-shadow: 2px 2px #111;
 }
 
