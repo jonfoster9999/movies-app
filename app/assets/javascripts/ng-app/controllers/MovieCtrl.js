@@ -6,6 +6,7 @@ function MovieCtrl($scope, $http, $stateParams, movie){
 	$scope.startEdit = startEdit;
 	$scope.isInEditMode = isInEditMode;
 	$scope.save = save
+	$scope.isInReadMode = isInReadMode;
 	$scope.submitted = function(){
 		$http({
 			method: 'POST',
@@ -20,16 +21,22 @@ function MovieCtrl($scope, $http, $stateParams, movie){
 		})
 	}
 
-	function startEdit() {
+
+
+	function startEdit(id) {
 
 	}
 
 	function isInEditMode() {
-
+		return true;
 	}
 
-	function save() {
-		
+	function save(id) {
+		alert("YOOOOO")
+	}
+
+	function isInReadMode(){
+		return true
 	}
 }
 

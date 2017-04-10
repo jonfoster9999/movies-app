@@ -6,29 +6,44 @@
 <br>
 <br>
 <div id="container">
-	<h1 class="title" ><span >{{movie.title}}</span></h1><br><span class="right"><a ui-sref="cast({id: movie.id})">Cast</a></span>
-<br>
+	<h1 class="title" >
+		<span >{{movie.title}}</span>
+	</h1>
+	<br>
+	<span class="right">
+		<a ui-sref="cast({id: movie.id})">Cast</a>
+	</span>
+	<br>
 	<img style="box-shadow: 1px 1px 1px 1px black" src="{{movie.image_url}}">
 	<div id="paragraph__container">
-		<p>{{movie.description}}<br> Box Office: <span id="box_office_field">${{movie.box_office}}</span> </p>
+		<p>{{movie.description}}
+		<br> Box Office: 
+			<span ng-show="isInReadMode()" id="box_office_field" ng-click="startEdit()">${{movie.box_office}}</span>
+			
+			<span ng-show="isInEditMode()">
+				<input type="text" ng-model="movie.box_office">
+				<button ng-click="save()">Save</button>
+				<button ng-click="cancel()">Cancel</button>
+			</span>
+		</p>
 	</div>
+	<button ng-click="startEdit(movie.id)">Edit</button>
 
 
+	<form name="form" ng-submit="submitted()">
+		<label for="content">New Comment:</label><br>
+		<textarea name="content" type="text" ng-model="formData.content" required="required"></textarea><br>
+		<label for="content">Email:</label><br>
+		<input type="email" name="email" ng-model="formData.email" required="required"><br>
+		<input type="submit">
+	</form>
 
-<form name="form" ng-submit="submitted()">
-	<label for="content">New Comment:</label><br>
-	<textarea name="content" type="text" ng-model="formData.content" required="required"></textarea><br>
-	<label for="content">Email:</label><br>
-	<input type="email" name="email" ng-model="formData.email" required="required"><br>
-	<input type="submit">
-</form>
-
-<ul class="comments">
-	<h5>Comments: </h5>
-	<hr>
-	<li  ng-repeat="comment in comments">
-	<span class="quote">"{{comment.content}}" </span> <span class="commentor">({{comment.email}})</span>
-	</li>
-</ul>
-
+	<ul class="comments">
+		<h5>Comments: </h5>
+		<hr>
+		<li  ng-repeat="comment in comments">
+			<span class="quote">"{{comment.content}}" </span>
+			<span class="commentor">({{comment.email}})</span>
+		</li>
+	</ul>
 </div>
