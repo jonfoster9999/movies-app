@@ -13,7 +13,7 @@
 <input id="search" type="text" placeholder="Enter zipcode" ng-model="searchText"><br>
 
 <p>
-Showing search results for <span class="search__color">{{searchText}}</span> <span ng-show="searchText.length == 5">{{locationName}}</span>:</p>
+Showing search results for <span class="search__color">{{searchText}}</span> <span class="location__color" ng-show="searchText.length == 5">{{locationName}}</span>:</p>
 <div class="movies__main">
 <ul ng-show="searchText.length == 5 && +(searchText)">
 

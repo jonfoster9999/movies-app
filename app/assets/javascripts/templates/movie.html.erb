@@ -6,11 +6,11 @@
 <br>
 <br>
 <div id="container">
-	<h1 class="title" ><span >{{movie.title}}</span><span class="right"><a ui-sref="cast({id: movie.id})">Cast</a></span><span class="right"><a ui-sref="home.movies">Home</a></span></h1>
-
+	<h1 class="title" ><span >{{movie.title}}</span></h1><br><span class="right"><a ui-sref="cast({id: movie.id})">Cast</a></span>
+<br>
 	<img style="box-shadow: 1px 1px 1px 1px black" src="{{movie.image_url}}">
 	<div id="paragraph__container">
-		<p>{{movie.description}} </p>
+		<p>{{movie.description}}<br> Box Office: <span id="box_office_field">${{movie.box_office}}</span> </p>
 	</div>
 
 

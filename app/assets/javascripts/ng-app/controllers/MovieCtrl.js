@@ -3,7 +3,9 @@ function MovieCtrl($scope, $http, $stateParams, movie){
 	$scope.comments = $scope.movie.comments
 	$scope.formData = {}
 	$scope.formData.movie_id = $scope.movie.id
-	console.log($scope.comments)
+	$scope.startEdit = startEdit;
+	$scope.isInEditMode = isInEditMode;
+	$scope.save = save
 	$scope.submitted = function(){
 		$http({
 			method: 'POST',
@@ -16,6 +18,18 @@ function MovieCtrl($scope, $http, $stateParams, movie){
 			$scope.formData.movie_id = $scope.movie.id
 			$scope.comments = data.data
 		})
+	}
+
+	function startEdit() {
+
+	}
+
+	function isInEditMode() {
+
+	}
+
+	function save() {
+		
 	}
 }
 

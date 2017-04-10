@@ -22,6 +22,7 @@ hr {
 
 h1.title {
 		color: black;
+		margin-bottom: 0px;
 }
 
 ul {
@@ -41,7 +42,7 @@ input[type="email"] {
 }
 
 .right {
-	float:right;
+	float:left;
 	margin-left: 3px;
 	
 }
@@ -49,7 +50,7 @@ input[type="email"] {
 .right a {
 	text-decoration: none;
 	color: white;
-	font-size: .5em;
+	font-size: .9em;
 
 	background-color: rgba(0, 0, 0, .2);
 	padding: 7px;

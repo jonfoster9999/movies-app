@@ -998,13 +998,11 @@ Location.find_by(:city => "Water Mill").movies += [
 	Movie.find(5)
 ]
 
-Location.find(1).save
-Location.find(2).save
-Location.find(3).save
-Location.find(4).save
-Location.find(5).save
-Location.find(6).save
-Location.find(7).save
-Location.find(8).save
-Location.find(9).save
-Location.find(10).save
+Location.all.each do |location|
+	location.save
+end
+
+Movie.all.each do |movie|
+	movie.box_office = 500000 + rand(10000000)
+	movie.save
+end
