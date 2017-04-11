@@ -41,6 +41,7 @@ function MovieCtrl($scope, $http, $stateParams, movie){
 	function save(id) {
 		var newBoxOffice = $scope.movie.box_office;
 		var id = id;
+		if (!isNaN(newBoxOffice)) {
 		$http({
 			method: 'PATCH',
 			beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
@@ -50,6 +51,9 @@ function MovieCtrl($scope, $http, $stateParams, movie){
 			$scope.movie.box_office = data.data.box_office;
 			reset();
 		})
+		} else {
+			alert("Please enter a valid dollar amount")
+		}
 	}
 
 	function isInReadMode(id){
