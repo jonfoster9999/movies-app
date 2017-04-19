@@ -1,4 +1,4 @@
-function InfoCtrl($scope) {
+function InfoCtrl() {
 
 }
 

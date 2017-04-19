@@ -1,27 +1,27 @@
-function MovieCtrl($scope, $http, $stateParams, movie){
+function MovieCtrl($http, $stateParams, movie){
 	var selectedId = -1
 	var editFlag = false
-
-	$scope.movie = movie.data
-	$scope.comments = $scope.movie.comments
-	$scope.formData = {}
-	$scope.formData.movie_id = $scope.movie.id
-	$scope.startEdit = startEdit;
-	$scope.isInEditMode = isInEditMode;
-	$scope.save = save
-	$scope.isInReadMode = isInReadMode;
-	$scope.cancel = cancel;
-	$scope.submitted = function(){
+	var vm = this;
+	vm.movie = movie.data
+	vm.comments = vm.movie.comments
+	vm.formData = {}
+	vm.formData.movie_id = vm.movie.id
+	vm.startEdit = startEdit;
+	vm.isInEditMode = isInEditMode;
+	vm.save = save
+	vm.isInReadMode = isInReadMode;
+	vm.cancel = cancel;
+	vm.submitted = function(){
 		$http({
 			method: 'POST',
 			beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
 			url: '/comments',
-			data: $scope.formData
+			data: vm.formData
 		}).then(function(data){
-			$scope.formData.content = '';
-			$scope.formData.email = '';
-			$scope.formData.movie_id = $scope.movie.id
-			$scope.comments = data.data
+			vm.formData.content = '';
+			vm.formData.email = '';
+			vm.formData.movie_id = vm.movie.id
+			vm.comments = data.data
 		})
 	}
 
@@ -39,7 +39,7 @@ function MovieCtrl($scope, $http, $stateParams, movie){
 	}
 
 	function save(id) {
-		var newBoxOffice = $scope.movie.box_office;
+		var newBoxOffice = vm.movie.box_office;
 		var id = id;
 		if (!isNaN(newBoxOffice)) {
 		$http({
@@ -48,7 +48,7 @@ function MovieCtrl($scope, $http, $stateParams, movie){
 			url: '/movies/' + id,
 			data: {newBoxOffice: newBoxOffice}
 		}).then(function(data){
-			$scope.movie.box_office = data.data.box_office;
+			vm.movie.box_office = data.data.box_office;
 			reset();
 		})
 		} else {

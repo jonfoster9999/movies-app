@@ -7,41 +7,41 @@
 <br>
 <div id="container">
 	<h1 class="title" >
-		<span >{{movie.title}}</span>
+		<span >{{vm.movie.title}}</span>
 	</h1>
 	<br>
 	<span class="right">
-		<a ui-sref="cast({id: movie.id})">Cast</a>
+		<a ui-sref="cast({id: vm.movie.id})">Cast</a>
 	</span>
 	<br>
-	<img style="box-shadow: 1px 1px 1px 1px black" src="{{movie.image_url}}">
+	<img style="box-shadow: 1px 1px 1px 1px black" src="{{vm.movie.image_url}}">
 	<div id="paragraph__container">
-		<p>{{movie.description}}
+		<p>{{vm.movie.description}}
 		<br> Box Office: 
-			<span ng-show="isInReadMode()" id="box_office_field" ng-click="startEdit(movie.id)">${{movie.box_office}}</span>
+			<span ng-show="vm.isInReadMode()" id="box_office_field" ng-click="vm.startEdit(vm.movie.id)">${{vm.movie.box_office}}</span>
 <!-- 			<button ng-show="isInReadMode()" ng-click="startEdit(movie.id)">Edit</button> -->
-			<span ng-show="isInEditMode()">
-				<input type="text" ng-model="movie.box_office" ng-pattern="\d+">
-				<button ng-click="save(movie.id)">Save</button>
-				<button ng-click="cancel()">Cancel</button>
+			<span ng-show="vm.isInEditMode()">
+				<input type="text" ng-model="vm.movie.box_office" ng-pattern="\d+">
+				<button ng-click="vm.save(vm.movie.id)">Save</button>
+				<button ng-click="vm.cancel()">Cancel</button>
 			</span>
 		</p>
 	</div>
 	
 
 
-	<form name="form" ng-submit="submitted()">
+	<form name="form" ng-submit="vm.submitted()">
 		<label for="content">New Comment:</label><br>
-		<textarea name="content" type="text" ng-model="formData.content" required="required"></textarea><br>
+		<textarea name="content" type="text" ng-model="vm.formData.content" required="required"></textarea><br>
 		<label for="content">Email:</label><br>
-		<input type="email" name="email" ng-model="formData.email" required="required"><br>
+		<input type="email" name="email" ng-model="vm.formData.email" required="required"><br>
 		<input type="submit">
 	</form>
 
 	<ul class="comments">
 		<h5>Comments: </h5>
 		<hr>
-		<li  ng-repeat="comment in comments">
+		<li  ng-repeat="comment in vm.comments">
 			<span class="quote">"{{comment.content}}" </span>
 			<span class="commentor">({{comment.email}})</span>
 		</li>

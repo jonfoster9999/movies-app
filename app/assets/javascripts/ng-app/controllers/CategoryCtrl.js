@@ -1,6 +1,7 @@
-function CategoryCtrl($scope, movies) {
-	$scope.categoryName = movies.data[0].category.name
-	$scope.movies = movies.data
+function CategoryCtrl(movies) {
+	var vm = this
+	vm.categoryName = movies.data[0].category.name
+	vm.movies = movies.data
 }
 
 

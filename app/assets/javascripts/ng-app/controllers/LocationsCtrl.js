@@ -1,20 +1,23 @@
 function LocationsCtrl($scope, locations) {
-	$scope.searchText= ""
-	$scope.locations = locations.data;
-	$scope.locationName = ""
+	var ctrl = this
+	ctrl.searchText= ""
+	ctrl.locations = locations.data;
+	ctrl.locationName = ""
 
 	var findName = function(){
-		if ($scope.searchText.length == 5) {
-		    var location =  $scope.locations.find(function(item){
-				return item.zip == +$scope.searchText
+
+		if (ctrl.searchText.length == 5) {
+		    var location =  ctrl.locations.find(function(item){
+				return item.zip == ctrl.searchText
 			})
 			if (location) {
-			  $scope.locationName = ("(" + location.city + ")")
+			  ctrl.locationName = ("(" + location.city + ")")
 			} else {
-			  $scope.locationName = "(No City Found) "
+			  ctrl.locationName = "(No City Found) "
 			}	
+			console.log(ctrl.locationName)
+
 			$scope.$apply();
-			console.log($scope.locationName)
 		}
 	}
 

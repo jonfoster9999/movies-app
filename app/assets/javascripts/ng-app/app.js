@@ -9,7 +9,7 @@ angular
 				.state('home', {
 					url: "/",
 					templateUrl: "index.html",
-					controller: 'MainCtrl',
+					controller: 'MainCtrl as vm',
 					resolve: {
 						movieObject: function($http){
 							return $http.get('/movies')
@@ -19,7 +19,7 @@ angular
 				.state('home.locations', {
 					url: "locations",
 					templateUrl: "location.html",
-					controller: 'LocationsCtrl',
+					controller: 'LocationsCtrl as ctrl',
 					resolve: {
 						locations: function($http) {
 							return $http.get('/locations')
@@ -45,10 +45,11 @@ angular
 					url: 'movies',
 					templateUrl: 'movies.html'
 				})
+
 				.state('movie', {
 					url: '/movies/:id',
 					templateUrl: 'movie.html',
-					controller: 'MovieCtrl',
+					controller: 'MovieCtrl as vm',
 					params: { id: null },
 					resolve: {
 						movie: function($http, $stateParams) {
@@ -66,7 +67,6 @@ angular
 						movie: function($http, $stateParams) {
 							return $http.get('/movies/' + $stateParams.id)
 						}
-
 					}
 				})
 
@@ -84,7 +84,7 @@ angular
 				.state('category', {
 					url: '/movies/categories/:id',
 					templateUrl: 'category.html',
-					controller: 'CategoryCtrl',
+					controller: 'CategoryCtrl as vm',
 					resolve: {
 						movies: function($http, $stateParams) {
 							return $http.get('/categories/' + $stateParams.id + "/movies")

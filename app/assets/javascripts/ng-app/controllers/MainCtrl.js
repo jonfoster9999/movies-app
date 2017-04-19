@@ -1,5 +1,6 @@
-function MainCtrl($scope, $http, movieObject) {
-	$scope.movies = movieObject.data
+function MainCtrl($http, movieObject) {
+	var vm = this
+	vm.movies = movieObject.data
 }
 
 angular 

@@ -10,15 +10,15 @@
 <br>
 <br>
 <h1>Search By Location</h1>
-<input id="search" type="text" placeholder="Enter zipcode" ng-model="searchText"><br>
+<input id="search" type="text" placeholder="Enter zipcode" ng-model="ctrl.searchText"><br>
 
 <p>
-Showing search results for <span class="search__color">{{searchText}}</span> <span class="location__color" ng-show="searchText.length == 5">{{locationName}}</span>:</p>
+Showing search results for <span class="search__color">{{ctrl.searchText}}</span> <span class="location__color" ng-show="ctrl.searchText.length == 5">{{ctrl.locationName}}</span>:</p>
 <div class="movies__main">
-<ul ng-show="searchText.length == 5 && +(searchText)">
+<ul ng-show="ctrl.searchText.length == 5 && +(ctrl.searchText)">
 
 
-<li ng-repeat="movie in movies | filter:searchText ">
+<li ng-repeat="movie in vm.movies | filter:ctrl.searchText ">
 <div class="item">
 				<a ui-sref="movie({id: movie.id})"><img src="{{movie.image_url}}" /><div class="item-overlay"></div></a>
 				<br>

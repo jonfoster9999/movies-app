@@ -10,9 +10,9 @@
 <br>
 
 <div class="movies__main">
-	<h1 class="category__name">{{categoryName}} </h1>	
+	<h1 class="category__name">{{vm.categoryName}} </h1>	
 	<ul>
-		<li ng-repeat="movie in movies">
+		<li ng-repeat="movie in vm.movies">
 			<div class="item">
 				<a ui-sref="movie({id: movie.id})"><img src="{{movie.image_url}}" /><div class="item-overlay"></div></a>
 				<br>
