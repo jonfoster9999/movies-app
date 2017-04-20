@@ -1,12 +1,12 @@
-function MovieCtrl($scope, $http, $stateParams, movieService){
-	console.log($stateParams.id)
+function MovieCtrl($scope, $http, $stateParams, movieService, commentService){
 	var selectedId = -1
 	var editFlag = false
 	var vm = this;
 	vm.movie = {};
-	vm.comments = vm.movie.comments
+	vm.comments = [];
 	vm.formData = {}
-	vm.formData.movie_id = vm.movie.id
+
+
 	vm.startEdit = startEdit;
 	vm.isInEditMode = isInEditMode;
 	vm.save = save
@@ -15,21 +15,17 @@ function MovieCtrl($scope, $http, $stateParams, movieService){
 
 	movieService.getMovie($http, $stateParams.id, function(data) {		
 		vm.movie = data.data
+		vm.comments = vm.movie.comments
+		vm.formData.movie_id = vm.movie.id
 	})
 
-	vm.submitted = function(){
-		$http({
-			method: 'POST',
-			beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
-			url: '/comments',
-			data: vm.formData
-		}).then(function(data){
+	vm.submitted = commentService.postComments.bind(null, $http, vm.formData, function(data){
+			console.log("Hello?")
 			vm.formData.content = '';
 			vm.formData.email = '';
 			vm.formData.movie_id = vm.movie.id
 			vm.comments = data.data
-		})
-	}
+	})
 
 	function reset() {
 		selectedId = -1;

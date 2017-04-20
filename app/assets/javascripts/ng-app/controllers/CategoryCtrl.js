@@ -1,4 +1,4 @@
-function CategoryCtrl(movies, $stateParams, $http, categoryService) {
+function CategoryCtrl($stateParams, $http, categoryService) {
 	var vm = this
 	vm.categoryName = ""
 	vm.movies = {}
@@ -10,8 +10,6 @@ function CategoryCtrl(movies, $stateParams, $http, categoryService) {
 				movie["votes"] = 0;
 		})
 	})
-
-
 
 	vm.upvote = function(movie) {
 		movie.votes++

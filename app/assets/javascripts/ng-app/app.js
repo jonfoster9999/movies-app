@@ -68,12 +68,7 @@ angular
 				.state('category', {
 					url: '/movies/categories/:id',
 					templateUrl: 'category.html',
-					controller: 'CategoryCtrl as vm',
-					resolve: {
-						movies: function($http, $stateParams) {
-							return $http.get('/categories/' + $stateParams.id + "/movies")
-						}
-					}
+					controller: 'CategoryCtrl as vm'
 				})
 
 			$urlRouterProvider.otherwise('movies');
