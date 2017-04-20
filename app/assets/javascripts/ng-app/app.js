@@ -9,22 +9,17 @@ angular
 				.state('home', {
 					url: "/",
 					templateUrl: "index.html",
-					controller: 'MainCtrl as vm',
-					resolve: {
-						movieObject: function($http){
-							return $http.get('/movies')
-						}
-					}
+					controller: 'MainCtrl as vm'
+					// resolve: {
+					// 	movieObject: function($http){
+					// 		return $http.get('/movies')
+					// 	}
+					// }
 				}) 
 				.state('home.locations', {
 					url: "locations",
 					templateUrl: "location.html",
-					controller: 'LocationsCtrl as ctrl',
-					resolve: {
-						locations: function($http) {
-							return $http.get('/locations')
-						}
-					}
+					controller: 'LocationsCtrl as ctrl'
 				})
 				.state('info', {
 					url: '/info', 
@@ -50,24 +45,13 @@ angular
 					url: '/movies/:id',
 					templateUrl: 'movie.html',
 					controller: 'MovieCtrl as vm',
-					params: { id: null },
-					resolve: {
-						movie: function($http, $stateParams) {
-							return $http.get('/movies/' + $stateParams.id)
-						}
-
-					}
+					params: { id: null }
 				})
 
 				.state('cast', {
 					url: '/movies/:id/cast',
 					templateUrl: 'cast.html',
-					controller: 'CastCtrl',
-					resolve: {
-						movie: function($http, $stateParams) {
-							return $http.get('/movies/' + $stateParams.id)
-						}
-					}
+					controller: 'CastCtrl'
 				})
 
 				.state('cast.actors', {

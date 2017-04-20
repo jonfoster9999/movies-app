@@ -1,8 +1,9 @@
-function MovieCtrl($http, $stateParams, movie){
+function MovieCtrl($scope, $http, $stateParams, movieService){
+	console.log($stateParams.id)
 	var selectedId = -1
 	var editFlag = false
 	var vm = this;
-	vm.movie = movie.data
+	vm.movie = {};
 	vm.comments = vm.movie.comments
 	vm.formData = {}
 	vm.formData.movie_id = vm.movie.id
@@ -11,6 +12,11 @@ function MovieCtrl($http, $stateParams, movie){
 	vm.save = save
 	vm.isInReadMode = isInReadMode;
 	vm.cancel = cancel;
+
+	movieService.getMovie($http, $stateParams.id, function(data) {		
+		vm.movie = data.data
+	})
+
 	vm.submitted = function(){
 		$http({
 			method: 'POST',

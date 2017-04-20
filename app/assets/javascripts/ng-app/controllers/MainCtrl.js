@@ -1,6 +1,10 @@
-function MainCtrl($http, movieObject) {
+function MainCtrl($http, movieService) {
 	var vm = this
-	vm.movies = movieObject.data
+	vm.movies = ""
+
+	movieService.getMovies($http, function(data) {		
+		vm.movies = data.data
+	})
 }
 
 angular 

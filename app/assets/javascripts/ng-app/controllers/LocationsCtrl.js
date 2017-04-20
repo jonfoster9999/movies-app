@@ -1,8 +1,12 @@
-function LocationsCtrl($scope, locations) {
+function LocationsCtrl($http, $scope, locationService) {
 	var ctrl = this
 	ctrl.searchText= ""
-	ctrl.locations = locations.data;
+	ctrl.locations = "";
 	ctrl.locationName = ""
+
+	locationService.getLocations($http, function(data) {
+		ctrl.locations = data.data;
+	})
 
 	var findName = function(){
 

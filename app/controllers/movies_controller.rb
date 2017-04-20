@@ -14,6 +14,10 @@ class MoviesController < ApplicationController
 		render json: Movie.find(params[:id])
 	end
 
+	def create
+		#create a new movie
+	end
+
 	def by_category
 		category = Category.find_by(:name => params[:id].capitalize)
 		render json: category.movies

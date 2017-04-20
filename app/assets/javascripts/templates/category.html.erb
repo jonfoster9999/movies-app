@@ -16,7 +16,9 @@
 			<div class="item">
 				<a ui-sref="movie({id: movie.id})"><img src="{{movie.image_url}}" /><div class="item-overlay"></div></a>
 				<br>
-				<a class="no__underline" ui-sref="movie({id: movie.id})"><span class="movie__title">{{movie.title}}</span></a><br>
+				<a class="no__underline" ui-sref="movie({id: movie.id})"><span class="movie__title">{{movie.title}} <br>
+				{{movie.votes}}</span></a>
+				<button ng-click="vm.upvote(movie)">Upvote</button><br>
 			</div>
 		</li>
 	</ul>
