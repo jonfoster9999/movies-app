@@ -17,8 +17,8 @@
 	<img style="box-shadow: 1px 1px 1px 1px black" src="{{vm.movie.image_url}}">
 	<div id="paragraph__container">
 		<p>{{vm.movie.description}}
-		<br> Box Office: 
-			<span ng-show="vm.isInReadMode()" id="box_office_field" ng-click="vm.startEdit(vm.movie.id)">${{vm.movie.box_office}}</span>
+<!-- 		<br> Box Office: 
+			<span ng-show="vm.isInReadMode()" id="box_office_field" ng-click="vm.startEdit(vm.movie.id)">${{vm.movie.box_office}}</span> -->
 <!-- 			<button ng-show="isInReadMode()" ng-click="startEdit(movie.id)">Edit</button> -->
 			<span ng-show="vm.isInEditMode()">
 				<input type="text" ng-model="vm.movie.box_office" >

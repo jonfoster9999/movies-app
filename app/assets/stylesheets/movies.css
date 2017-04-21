@@ -18,6 +18,31 @@ hr {
 	margin-right: auto;
 }
 
+#movie__form {
+	clear: both;
+	color: white;
+	font-size: .9em;
+	display: block;
+	margin-left: 140px
+}
+
+input {
+	width: 15%;
+}
+
+textarea {
+	width: 30%;
+	height: 130px;
+}
+
+/*#movie__form input {
+	float: right;
+	clear: both;
+}
+#movie__form label {
+	float: left;
+}
+*/
 .movie__label {
 	color: gold;
 	margin-left: 16px;

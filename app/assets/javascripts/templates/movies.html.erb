@@ -8,26 +8,9 @@
 <br>
 <br>
 <!-- todo: make this a spacer div ^^^^^^ -->
-<a ui-sref="newMovie">Create a new movie</a>
 
 
-<form ng-submit="vm.createMovie()">
-Title:
-	<input type="text" name="movie[title]" ng-model="vm.formData.movieTitle"><br>
-Description:
-	<input type="text" name="movie[description]" ng-model="vm.formData.movieDescription"><br>
-Image Url:
-	<input type="text" name="movie[image_url]" ng-model="vm.formData.movieImageUrl"><br>
-Category: 
-<select name="category_id" ng-model="vm.formData.movieCategoryId">
-  <option value="1">Comedy</option>
-  <option value="2">Drama</option>
-  <option value="3">Horror</option>
-  <option value="4">Action</option>
-  <option value="5">Family</option>
-</select>
-<input type="submit">
-</form>
+
 
 
 <div class="movies__main">
@@ -37,6 +20,33 @@ Category:
 	<genre-group genre="Action", movies="vm.movies"></genre-group>
 	<genre-group genre="Horror", movies="vm.movies"></genre-group>
 </div>
+<br>
+<hr style="clear: both;">
+<br>
+<form ng-submit="vm.createMovie()" id="movie__form">
+	<h2>Create A New Movie: </h2>
+	<label for="title">Title:</label><br>
+		<input type="text" name="title" required="required" ng-model="vm.formData.movieTitle"><br>
+	<label for="description">Description:</label><br>
+		<textarea type="text" required="required" name="description" ng-model="vm.formData.movieDescription"></textarea><br>
+	<label for="image_url">Image Url:</label><br>
+		<input type="text" required="required" name="image_url" ng-model="vm.formData.movieImageUrl"><br>
+	<label for="category_id">Category:</label><br> 
+	<select name="category_id" ng-model="vm.formData.movieCategoryId">
+	  <option value="1">Comedy</option>
+	  <option value="2">Drama</option>
+	  <option value="3">Horror</option>
+	  <option value="4">Action</option>
+	  <option value="5">Family</option>
+	</select><br><br>
+	<input type="submit">
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 
 

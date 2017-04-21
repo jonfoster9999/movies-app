@@ -20,14 +20,11 @@ function MovieCtrl($scope, $http, $stateParams, movieService, commentService){
 	})
 
 	vm.submitted = commentService.postComments.bind(null, $http, vm.formData, function(data){
-			console.log("Hello?")
-			vm.formData.content = '';
-			vm.formData.email = '';
-			vm.formData.movie_id = vm.movie.id
-			vm.comments = data.data
+		vm.formData.content = '';
+		vm.formData.email = '';
+		vm.formData.movie_id = vm.movie.id
+		vm.comments = data.data
 	})
-
-
 
 	function reset() {
 		selectedId = -1;
@@ -44,7 +41,6 @@ function MovieCtrl($scope, $http, $stateParams, movieService, commentService){
 
 	function save(id) {
 		var newBoxOffice = vm.movie.box_office;
-		var id = id;
 		if (!isNaN(newBoxOffice)) {
 		$http({
 			method: 'PATCH',
