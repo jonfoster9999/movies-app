@@ -27,6 +27,8 @@ function MovieCtrl($scope, $http, $stateParams, movieService, commentService){
 			vm.comments = data.data
 	})
 
+
+
 	function reset() {
 		selectedId = -1;
 		editFlag = false

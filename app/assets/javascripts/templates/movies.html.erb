@@ -9,6 +9,27 @@
 <br>
 <!-- todo: make this a spacer div ^^^^^^ -->
 <a ui-sref="newMovie">Create a new movie</a>
+
+
+<form ng-submit="vm.createMovie()">
+Title:
+	<input type="text" name="movie[title]" ng-model="vm.formData.movieTitle"><br>
+Description:
+	<input type="text" name="movie[description]" ng-model="vm.formData.movieDescription"><br>
+Image Url:
+	<input type="text" name="movie[image_url]" ng-model="vm.formData.movieImageUrl"><br>
+Category: 
+<select name="category_id" ng-model="vm.formData.movieCategoryId">
+  <option value="1">Comedy</option>
+  <option value="2">Drama</option>
+  <option value="3">Horror</option>
+  <option value="4">Action</option>
+  <option value="5">Family</option>
+</select>
+<input type="submit">
+</form>
+
+
 <div class="movies__main">
 	<genre-group genre="Drama", movies="vm.movies"></genre-group>
 	<genre-group genre="Family", movies="vm.movies"></genre-group>
@@ -16,4 +37,8 @@
 	<genre-group genre="Action", movies="vm.movies"></genre-group>
 	<genre-group genre="Horror", movies="vm.movies"></genre-group>
 </div>
+<br>
+
+
+
 

@@ -15,11 +15,17 @@ class MoviesController < ApplicationController
 	end
 
 	def create
-		#create a new movie
+		movie = Movie.create(movie_params)
+		render json: Movie.all
 	end
 
 	def by_category
 		category = Category.find_by(:name => params[:id].capitalize)
 		render json: category.movies
 	end
+
+	private 
+		def movie_params
+			params.require(:movie).permit(:title, :description, :image_url, :category_id)
+		end
 end
