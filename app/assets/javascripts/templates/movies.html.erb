@@ -23,14 +23,29 @@
 <br>
 <hr style="clear: both;">
 <br>
-<form ng-submit="vm.createMovie()" id="movie__form">
+<form ng-submit="vm.createMovie()" id="movie__form" name="myForm">
 	<h2>Create A New Movie: </h2>
 	<label for="title">Title:</label><br>
-		<input type="text" name="title" required="required" ng-model="vm.formData.movieTitle"><br>
+		<input type="text" name="title" required="required" minlength="2" ng-model="vm.formData.movieTitle"><br>
+
+
+
+
 	<label for="description">Description:</label><br>
 		<textarea type="text" required="required" name="description" ng-model="vm.formData.movieDescription"></textarea><br>
+	
+
 	<label for="image_url">Image Url:</label><br>
-		<input type="text" required="required" name="image_url" ng-model="vm.formData.movieImageUrl"><br>
+		<input type="text" required="required" pattern="^https?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+\.(?:jpg|gif|png)$"
+
+		 name="image_url" ng-model="vm.formData.movieImageUrl"><br>
+
+  <div ng-messages="myForm.image_url.$error" role="alert">
+    
+    <div ng-message="pattern" style="color: orange; margin-top: 3px;">Please enter a valid image path.</div>
+  </div>
+
+
 	<label for="category_id">Category:</label><br> 
 	<select name="category_id" ng-model="vm.formData.movieCategoryId">
 	  <option value="1">Comedy</option>
