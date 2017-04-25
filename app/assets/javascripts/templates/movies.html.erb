@@ -26,7 +26,7 @@
 <form ng-submit="vm.createMovie()" id="movie__form" name="myForm">
 	<h2>Create A New Movie: </h2>
 	<label for="title">Title:</label><br>
-		<input type="text" name="title" required="required" minlength="2" ng-model="vm.formData.movieTitle"><br>
+		<input class="title" type="text" name="title" required="required" minlength="2" ng-model="vm.formData.movieTitle"><br>
 
 
 
@@ -54,7 +54,7 @@
 	  <option value="4">Action</option>
 	  <option value="5">Family</option>
 	</select><br><br>
-	<input type="submit">
+	<input type="submit" value="Create Movie">
 </form>
 <br>
 <br>

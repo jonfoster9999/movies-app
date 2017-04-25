@@ -7,11 +7,11 @@ function MovieCtrl($scope, $http, $stateParams, movieService, commentService){
 	vm.formData = {}
 
 
-	vm.startEdit = startEdit;
-	vm.isInEditMode = isInEditMode;
-	vm.save = save
-	vm.isInReadMode = isInReadMode;
-	vm.cancel = cancel;
+	// vm.startEdit = startEdit;
+	// vm.isInEditMode = isInEditMode;
+	// vm.save = save
+	// vm.isInReadMode = isInReadMode;
+	// vm.cancel = cancel;
 
 	movieService.getMovie($http, $stateParams.id, function(data) {		
 		vm.movie = data.data

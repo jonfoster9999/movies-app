@@ -10,6 +10,11 @@ h1.category__name {
 	font-size: .4em;
 }
 
+.upvote__button {
+	margin-left: 55px;
+	margin-top: 4px;
+}
+
 .item-overlay {
 	height: 200px;
 	width: 130px;

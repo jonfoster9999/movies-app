@@ -11,6 +11,7 @@
 
 <div class="movies__main">
 	<h1 class="category__name">{{vm.categoryName}} </h1>	
+	<button class="upvote__button" ng-click="vm.sortByUpvotes()">Sort By Upvotes</button>
 	<ul>
 		<li ng-repeat="movie in vm.movies">
 			<div class="item">

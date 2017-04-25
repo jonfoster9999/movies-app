@@ -14,6 +14,12 @@ function CategoryCtrl($stateParams, $http, categoryService) {
 	vm.upvote = function(movie) {
 		movie.votes++
 	}
+
+	vm.sortByUpvotes = function() {
+		vm.movies.sort(function(x, y){
+			return y["votes"] - x["votes"]
+		})
+	}
 }
 
 

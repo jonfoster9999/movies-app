@@ -26,7 +26,13 @@ hr {
 	margin-left: 140px
 }
 
+
+
 input {
+	width: 30%;
+}
+
+input.title, input[type="submit"] {
 	width: 15%;
 }
 

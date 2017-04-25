@@ -3,7 +3,6 @@ function MainCtrl($http, movieService) {
 	vm.movies = ""
 	vm.formData = {}
 	vm.formData.movieCategoryId = "1"
-	vm.regex = "^https?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+\.(?:jpg|gif|png)$"
 	movieService.getMovies($http, function(data) {		
 		vm.movies = data.data
 	})
